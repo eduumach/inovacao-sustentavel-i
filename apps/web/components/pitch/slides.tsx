@@ -10,7 +10,6 @@ import {
   GraduationCap,
   Layers,
   Leaf,
-  MapPin,
   Network,
   Satellite,
   ShieldCheck,
@@ -71,11 +70,6 @@ export function SlideCover() {
         O gêmeo digital ambiental de Uberlândia — bairro por bairro, decisão por
         decisão.
       </p>
-
-      <div className="mt-10 flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-emerald-600/70">
-        <MapPin className="size-4" />
-        Prefeitura de Uberlândia
-      </div>
     </Slide>
   )
 }
