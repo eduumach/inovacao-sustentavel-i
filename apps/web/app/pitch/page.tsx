@@ -15,6 +15,7 @@ import {
   SlideResults,
   SlideSimulations,
   SlideSolution,
+  SlideTeam,
 } from "@/components/pitch/slides"
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function PitchPage() {
       <SlideResults />
       <SlideImpact />
       <SlideFuture />
+      <SlideTeam />
       <SlideClosing />
     </PitchDeck>
   )

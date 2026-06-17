@@ -42,7 +42,7 @@ export function Grid({ className }: { className?: string }) {
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(110,231,183,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(110,231,183,0.06)_1px,transparent_1px)] bg-[size:48px_48px]",
+        "pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(6,95,70,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(6,95,70,0.07)_1px,transparent_1px)] bg-[size:48px_48px]",
         className
       )}
     />
@@ -51,8 +51,8 @@ export function Grid({ className }: { className?: string }) {
 
 export function Kicker({ children }: { children: ReactNode }) {
   return (
-    <span className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">
-      <span className="h-px w-6 bg-emerald-400" />
+    <span className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
+      <span className="h-px w-6 bg-emerald-600" />
       {children}
     </span>
   )
@@ -70,11 +70,11 @@ export function SlideHeading({
   return (
     <div className="max-w-3xl">
       <Kicker>{kicker}</Kicker>
-      <h2 className="text-3xl font-bold leading-[1.1] text-white sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-bold leading-[1.1] text-emerald-950 sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 text-base leading-relaxed text-emerald-100/70 sm:text-lg">
+        <p className="mt-5 text-base leading-relaxed text-emerald-800/80 sm:text-lg">
           {description}
         </p>
       ) : null}
@@ -92,7 +92,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-2xl border border-emerald-400/15 bg-white/[0.03] p-6 backdrop-blur-sm",
+        "rounded-2xl border border-emerald-900/10 bg-white/70 p-6 shadow-sm backdrop-blur-sm",
         className
       )}
     >
@@ -103,7 +103,7 @@ export function Card({
 
 export function Pill({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
+    <span className="inline-flex items-center rounded-full border border-emerald-600/25 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-800">
       {children}
     </span>
   )
