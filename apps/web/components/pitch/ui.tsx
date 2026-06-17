@@ -51,7 +51,7 @@ export function Grid({ className }: { className?: string }) {
 
 export function Kicker({ children }: { children: ReactNode }) {
   return (
-    <span className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
+    <span className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">
       <span className="h-px w-6 bg-emerald-600" />
       {children}
     </span>
@@ -68,13 +68,13 @@ export function SlideHeading({
   description?: ReactNode
 }) {
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-4xl">
       <Kicker>{kicker}</Kicker>
-      <h2 className="text-3xl font-bold leading-[1.1] text-emerald-950 sm:text-4xl lg:text-5xl">
+      <h2 className="text-4xl font-bold leading-[1.1] text-emerald-950 sm:text-5xl lg:text-6xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 text-base leading-relaxed text-emerald-800/80 sm:text-lg">
+        <p className="mt-5 text-lg leading-relaxed text-emerald-800/80 sm:text-xl">
           {description}
         </p>
       ) : null}
@@ -103,7 +103,7 @@ export function Card({
 
 export function Pill({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-emerald-600/25 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-800">
+    <span className="inline-flex items-center rounded-full border border-emerald-600/25 bg-emerald-500/10 px-4 py-1.5 text-sm font-medium text-emerald-800">
       {children}
     </span>
   )

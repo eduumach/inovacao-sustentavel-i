@@ -58,21 +58,21 @@ export function SlideCover() {
         Desafio: Monitoramento Tecnológico e Indicadores de Qualidade Ambiental
       </Pill>
 
-      <h1 className="mt-8 flex items-center gap-4 text-6xl font-extrabold tracking-tight text-emerald-950 sm:text-8xl">
+      <h1 className="mt-8 flex items-center gap-4 text-7xl font-extrabold tracking-tight text-emerald-950 sm:text-9xl">
         <Leaf className="size-12 text-emerald-600 sm:size-16" />
         VERDE
       </h1>
 
-      <p className="mt-4 max-w-2xl text-balance text-lg font-medium text-emerald-800/90 sm:text-xl">
+      <p className="mt-4 max-w-2xl text-balance text-xl font-medium text-emerald-800/90 sm:text-2xl">
         Visão Estratégica para Resiliência, Dados e Ecossistemas
       </p>
 
-      <p className="mt-6 max-w-xl text-balance text-sm text-emerald-700/60 sm:text-base">
+      <p className="mt-6 max-w-xl text-balance text-base text-emerald-700/60 sm:text-lg">
         O gêmeo digital ambiental de Uberlândia — bairro por bairro, decisão por
         decisão.
       </p>
 
-      <div className="mt-10 flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-emerald-600/70">
+      <div className="mt-10 flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-emerald-600/70">
         <MapPin className="size-4" />
         Prefeitura de Uberlândia
       </div>
@@ -117,17 +117,17 @@ export function SlideProblem() {
         {items.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
-            <h3 className="mt-4 text-base font-semibold text-emerald-950">
+            <h3 className="mt-4 text-lg font-semibold text-emerald-950">
               {item.title}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+            <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
               {item.text}
             </p>
           </Card>
         ))}
       </div>
 
-      <p className="mt-10 max-w-2xl text-lg font-medium text-emerald-800/80">
+      <p className="mt-10 max-w-2xl text-xl font-medium text-emerald-800/80">
         A Prefeitura tem muitos dados — e nenhum índice que os una.
       </p>
     </Slide>
@@ -148,31 +148,31 @@ export function SlideInsight() {
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
         <Card className="border-emerald-400/30 bg-emerald-400/5">
           <Sprout className="size-6 text-emerald-600" />
-          <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-emerald-700">
+          <p className="mt-3 text-base font-semibold uppercase tracking-wide text-emerald-700">
             C baixo · 0,05–0,20
           </p>
-          <p className="mt-1 text-lg font-semibold text-emerald-950">
+          <p className="mt-1 text-xl font-semibold text-emerald-950">
             Solo permeável e vegetado
           </p>
-          <p className="mt-2 text-sm text-emerald-700/60">
+          <p className="mt-2 text-base text-emerald-700/60">
             Mais infiltração, menos escoamento, menos calor retido.
           </p>
         </Card>
 
         <div className="flex items-center justify-center gap-3 text-emerald-700/60">
           <Gauge className="size-8" />
-          <span className="font-mono text-sm">Q = C · i · A</span>
+          <span className="font-mono text-base">Q = C · i · A</span>
         </div>
 
         <Card className="border-amber-400/30 bg-amber-400/5">
           <Layers className="size-6 text-amber-600" />
-          <p className="mt-3 text-sm font-semibold uppercase tracking-wide text-amber-700">
+          <p className="mt-3 text-base font-semibold uppercase tracking-wide text-amber-700">
             C alto · 0,70–0,95
           </p>
-          <p className="mt-1 text-lg font-semibold text-emerald-950">
+          <p className="mt-1 text-xl font-semibold text-emerald-950">
             Solo impermeabilizado
           </p>
-          <p className="mt-2 text-sm text-emerald-700/60">
+          <p className="mt-2 text-base text-emerald-700/60">
             Mais escoamento, mais risco de enchente e mais ilha de calor.
           </p>
         </Card>
@@ -219,10 +219,10 @@ export function SlideSolution() {
         {features.map((feature) => (
           <Card key={feature.title}>
             <feature.icon className="size-6 text-emerald-600" />
-            <h3 className="mt-4 text-base font-semibold text-emerald-950">
+            <h3 className="mt-4 text-lg font-semibold text-emerald-950">
               {feature.title}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+            <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
               {feature.text}
             </p>
           </Card>
@@ -231,7 +231,7 @@ export function SlideSolution() {
 
       <Link
         href="/"
-        className="mt-10 inline-flex items-center gap-2 self-start text-sm font-medium text-emerald-700 underline-offset-4 hover:underline"
+        className="mt-10 inline-flex items-center gap-2 self-start text-base font-medium text-emerald-700 underline-offset-4 hover:underline"
       >
         Ver protótipo do mapa interativo
         <ArrowRight className="size-4" />
@@ -278,10 +278,10 @@ export function SlideHowItWorks() {
           <div key={step.title} className="relative">
             <Card className="h-full">
               <step.icon className="size-6 text-emerald-600" />
-              <h3 className="mt-4 text-base font-semibold text-emerald-950">
+              <h3 className="mt-4 text-lg font-semibold text-emerald-950">
                 {step.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+              <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
                 {step.text}
               </p>
             </Card>
@@ -319,23 +319,23 @@ export function SlideIndex() {
             <Card key={c.label} className="flex flex-row items-start gap-3">
               <c.icon className="mt-1 size-5 shrink-0 text-emerald-600" />
               <div>
-                <p className="text-sm font-semibold text-emerald-950">{c.label}</p>
-                <p className="text-xs text-emerald-700/60">{c.weight}</p>
+                <p className="text-base font-semibold text-emerald-950">{c.label}</p>
+                <p className="text-sm text-emerald-700/60">{c.weight}</p>
               </div>
             </Card>
           ))}
         </div>
 
         <Card className="flex flex-col items-center justify-center gap-3 border-emerald-400/30 bg-emerald-400/5 text-center">
-          <p className="text-xs uppercase tracking-wide text-emerald-700">
+          <p className="text-sm uppercase tracking-wide text-emerald-700">
             Exemplo de leitura
           </p>
-          <p className="text-5xl font-extrabold text-emerald-950">62</p>
-          <p className="text-sm text-emerald-700/60">ISA do bairro · escala 0–100</p>
+          <p className="text-6xl font-extrabold text-emerald-950">62</p>
+          <p className="text-base text-emerald-700/60">ISA do bairro · escala 0–100</p>
           <div className="mt-2 h-2 w-full max-w-48 overflow-hidden rounded-full bg-emerald-200">
             <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-amber-400 via-lime-400 to-emerald-400" />
           </div>
-          <p className="text-xs text-emerald-700/50">
+          <p className="text-sm text-emerald-700/50">
             C baixo + vegetação alta → ISA alto
           </p>
         </Card>
@@ -364,15 +364,15 @@ export function SlideCaseStudy() {
       <div className="mt-10 grid gap-4 sm:grid-cols-3">
         {metrics.map((m) => (
           <Card key={m.label}>
-            <p className="text-xs uppercase tracking-wide text-emerald-700/50">
+            <p className="text-sm uppercase tracking-wide text-emerald-700/50">
               {m.label}
             </p>
-            <p className={`mt-2 text-3xl font-bold ${m.tone}`}>{m.value}</p>
+            <p className={`mt-2 text-4xl font-bold ${m.tone}`}>{m.value}</p>
           </Card>
         ))}
       </div>
 
-      <p className="mt-6 text-xs text-emerald-700/40">
+      <p className="mt-6 text-sm text-emerald-700/40">
         Valores ilustrativos para demonstrar a proposta — calibrados com dados reais
         na fase piloto.
       </p>
@@ -424,8 +424,8 @@ export function SlideSimulations() {
         {interventions.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
-            <h3 className="mt-4 text-sm font-semibold text-emerald-950">{item.title}</h3>
-            <p className="mt-2 text-xs leading-relaxed text-emerald-700/60">
+            <h3 className="mt-4 text-base font-semibold text-emerald-950">{item.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
               {item.text}
             </p>
           </Card>
@@ -448,47 +448,47 @@ export function SlideResults() {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         <Card className="border-rose-400/20 bg-rose-400/5">
-          <p className="text-xs uppercase tracking-wide text-rose-700">Antes</p>
+          <p className="text-sm uppercase tracking-wide text-rose-700">Antes</p>
           <div className="mt-4 space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">Coeficiente C</span>
-              <span className="font-mono text-lg font-semibold text-emerald-950">0,78</span>
+              <span className="text-base text-emerald-800/70">Coeficiente C</span>
+              <span className="font-mono text-xl font-semibold text-emerald-950">0,78</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">ISA</span>
-              <span className="font-mono text-lg font-semibold text-emerald-950">38</span>
+              <span className="text-base text-emerald-800/70">ISA</span>
+              <span className="font-mono text-xl font-semibold text-emerald-950">38</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">Risco de alagamento</span>
-              <span className="text-sm font-semibold text-rose-700">Alto</span>
+              <span className="text-base text-emerald-800/70">Risco de alagamento</span>
+              <span className="text-base font-semibold text-rose-700">Alto</span>
             </div>
           </div>
         </Card>
 
         <Card className="border-emerald-400/30 bg-emerald-400/5">
-          <p className="text-xs uppercase tracking-wide text-emerald-700">Depois</p>
+          <p className="text-sm uppercase tracking-wide text-emerald-700">Depois</p>
           <div className="mt-4 space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">Coeficiente C</span>
-              <span className="flex items-center gap-1 font-mono text-lg font-semibold text-emerald-950">
+              <span className="text-base text-emerald-800/70">Coeficiente C</span>
+              <span className="flex items-center gap-1 font-mono text-xl font-semibold text-emerald-950">
                 0,51 <TrendingDown className="size-4 text-emerald-600" />
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">ISA</span>
-              <span className="flex items-center gap-1 font-mono text-lg font-semibold text-emerald-950">
+              <span className="text-base text-emerald-800/70">ISA</span>
+              <span className="flex items-center gap-1 font-mono text-xl font-semibold text-emerald-950">
                 67 <TrendingUp className="size-4 text-emerald-600" />
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-emerald-800/70">Risco de alagamento</span>
-              <span className="text-sm font-semibold text-emerald-700">Moderado</span>
+              <span className="text-base text-emerald-800/70">Risco de alagamento</span>
+              <span className="text-base font-semibold text-emerald-700">Moderado</span>
             </div>
           </div>
         </Card>
       </div>
 
-      <p className="mt-6 text-xs text-emerald-700/40">
+      <p className="mt-6 text-sm text-emerald-700/40">
         Projeção ilustrativa do modelo, a ser validada com dados de campo na fase
         piloto.
       </p>
@@ -530,10 +530,10 @@ export function SlideImpact() {
         {items.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
-            <h3 className="mt-4 text-base font-semibold text-emerald-950">
+            <h3 className="mt-4 text-lg font-semibold text-emerald-950">
               {item.title}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+            <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
               {item.text}
             </p>
           </Card>
@@ -571,13 +571,13 @@ export function SlideFuture() {
       <div className="mt-10 grid gap-4 lg:grid-cols-3">
         {phases.map((phase, i) => (
           <Card key={phase.title} className="relative">
-            <span className="flex size-8 items-center justify-center rounded-full border border-emerald-400/30 text-sm font-semibold text-emerald-700">
+            <span className="flex size-8 items-center justify-center rounded-full border border-emerald-400/30 text-base font-semibold text-emerald-700">
               {i + 1}
             </span>
-            <h3 className="mt-4 text-base font-semibold text-emerald-950">
+            <h3 className="mt-4 text-lg font-semibold text-emerald-950">
               {phase.title}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+            <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
               {phase.text}
             </p>
           </Card>
@@ -616,13 +616,13 @@ export function SlideTeam() {
         {members.map((member) => (
           <Card key={member.name}>
             <GraduationCap className="size-6 text-emerald-600" />
-            <h3 className="mt-4 text-base font-semibold text-emerald-950">
+            <h3 className="mt-4 text-lg font-semibold text-emerald-950">
               {member.name}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-700/60">
+            <p className="mt-2 text-base leading-relaxed text-emerald-700/60">
               {member.role}
             </p>
-            <p className="mt-1 text-xs uppercase tracking-wide text-emerald-700/40">
+            <p className="mt-1 text-sm uppercase tracking-wide text-emerald-700/40">
               {member.formation}
             </p>
           </Card>
@@ -644,7 +644,7 @@ export function SlideClosing() {
 
       <Target className="size-10 text-emerald-600" />
 
-      <h2 className="mt-6 max-w-3xl text-balance text-3xl font-bold leading-tight text-emerald-950 sm:text-5xl">
+      <h2 className="mt-6 max-w-3xl text-balance text-4xl font-bold leading-tight text-emerald-950 sm:text-6xl">
         VERDE: o ecossistema de dados que Uberlândia precisa para crescer sem
         perder seu equilíbrio
       </h2>
@@ -656,13 +656,13 @@ export function SlideClosing() {
 
       <Link
         href="/"
-        className="mt-10 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2.5 text-sm font-medium text-emerald-800 transition-colors hover:bg-emerald-400/20"
+        className="mt-10 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2.5 text-base font-medium text-emerald-800 transition-colors hover:bg-emerald-400/20"
       >
         Ver protótipo interativo
         <ArrowRight className="size-4" />
       </Link>
 
-      <p className="mt-10 text-xs uppercase tracking-[0.25em] text-emerald-600/50">
+      <p className="mt-10 text-sm uppercase tracking-[0.25em] text-emerald-600/50">
         Obrigado
       </p>
     </Slide>
