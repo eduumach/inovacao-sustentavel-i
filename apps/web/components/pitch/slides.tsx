@@ -25,6 +25,7 @@ import {
 
 import type { SlideMeta } from "@/components/pitch/pitch-deck"
 import { Card, Glow, Grid, Kicker, Pill, Slide, SlideHeading } from "@/components/pitch/ui"
+import { COEFFICIENT_LEGEND } from "@/lib/flood-zones"
 
 export const SLIDE_META: SlideMeta[] = [
   { id: "capa", label: "Capa" },
@@ -32,7 +33,7 @@ export const SLIDE_META: SlideMeta[] = [
   { id: "insight", label: "O insight" },
   { id: "solucao", label: "A solução" },
   { id: "funcionamento", label: "Como funciona" },
-  { id: "indice", label: "Índice ISA" },
+  { id: "indice", label: "Classificação de risco" },
   { id: "caso", label: "Rondon Pacheco" },
   { id: "simulacoes", label: "Simulações" },
   { id: "resultado", label: "Resultado" },
@@ -291,10 +292,26 @@ export function SlideHowItWorks() {
 
 export function SlideIndex() {
   const components = [
-    { icon: Gauge, label: "Coeficiente de escoamento (C)", weight: "eixo central" },
-    { icon: TreePine, label: "Cobertura vegetal", weight: "% de área verde" },
-    { icon: Thermometer, label: "Temperatura de superfície", weight: "ilha de calor" },
-    { icon: Waves, label: "Histórico de alagamentos", weight: "risco hídrico" },
+    {
+      icon: Gauge,
+      label: "Coeficiente de escoamento (C)",
+      weight: "0 a 1, por bairro — eixo central",
+    },
+    {
+      icon: Layers,
+      label: "Classificação de risco",
+      weight: "4 níveis, do C: Excelente → Crítica",
+    },
+    {
+      icon: Droplets,
+      label: "Volume estimado de escoamento",
+      weight: "litros em chuva forte, por bairro",
+    },
+    {
+      icon: TreePine,
+      label: "Cobertura vegetal e temperatura",
+      weight: "próxima camada do índice (roadmap)",
+    },
   ]
 
   return (
@@ -302,9 +319,9 @@ export function SlideIndex() {
       <Glow className="-top-24 right-0 size-[28rem] bg-lime-400/10" />
 
       <SlideHeading
-        kicker="O índice"
-        title="Um placar ambiental por bairro, atualizado continuamente"
-        description="O Índice de Saúde Ambiental (ISA) combina quatro camadas de dados em uma nota de 0 a 100 por bairro — fácil de entender para a gestão pública e para o cidadão."
+        kicker="Classificação de risco"
+        title="Hoje, o protótipo já classifica cada bairro por nível de risco"
+        description="O coeficiente de escoamento (C) de cada bairro é convertido em uma classificação de 4 níveis e em um volume estimado de água escoada — visível agora no mapa interativo. Cobertura vegetal e temperatura de superfície são a próxima camada do índice."
       />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
@@ -322,16 +339,27 @@ export function SlideIndex() {
 
         <Card className="flex flex-col items-center justify-center gap-3 border-emerald-400/30 bg-emerald-400/5 text-center">
           <p className="text-sm uppercase tracking-wide text-emerald-700">
-            Exemplo de leitura
+            Escala usada no mapa interativo
           </p>
-          <p className="text-6xl font-extrabold text-emerald-950">62</p>
-          <p className="text-base text-emerald-700/60">ISA do bairro · escala 0–100</p>
-          <div className="mt-2 h-2 w-full max-w-48 overflow-hidden rounded-full bg-emerald-200">
-            <div className="h-full w-[62%] rounded-full bg-gradient-to-r from-amber-400 via-lime-400 to-emerald-400" />
+          <div className="mt-2 flex w-full flex-col gap-3 text-left">
+            {COEFFICIENT_LEGEND.map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center justify-between gap-3 text-base"
+              >
+                <span className="flex items-center gap-2 font-semibold text-emerald-950">
+                  <span
+                    className="size-3 shrink-0 rounded-full"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  {item.label}
+                </span>
+                <span className="font-mono text-sm text-emerald-700/60">
+                  C {item.range}
+                </span>
+              </div>
+            ))}
           </div>
-          <p className="text-sm text-emerald-700/50">
-            C baixo + vegetação alta → ISA alto
-          </p>
         </Card>
       </div>
     </Slide>
@@ -340,9 +368,13 @@ export function SlideIndex() {
 
 export function SlideCaseStudy() {
   const metrics = [
-    { label: "Coeficiente de escoamento (C)", value: "≈ 0,78", tone: "text-amber-700" },
-    { label: "Cobertura vegetal", value: "≈ 9%", tone: "text-amber-700" },
-    { label: "ISA atual", value: "38 / 100", tone: "text-rose-700" },
+    { label: "Coeficiente de escoamento (C)", value: "0,82", tone: "text-rose-700" },
+    { label: "Classificação", value: "Crítica", tone: "text-rose-700" },
+    {
+      label: "Volume estimado por chuva forte",
+      value: "73,8 milhões de L",
+      tone: "text-rose-700",
+    },
   ]
 
   return (
@@ -352,7 +384,7 @@ export function SlideCaseStudy() {
       <SlideHeading
         kicker="Estudo de caso"
         title="Avenida Rondon Pacheco: o corredor onde o problema fica visível"
-        description="Grande volume de pavimento (via larga, estacionamentos comerciais), pouca arborização e relatos recorrentes de alagamento pontual nas chuvas mais fortes — um cenário típico de C alto e ISA crítico."
+        description="Grande volume de pavimento (via larga, estacionamentos comerciais), pouca arborização e relatos recorrentes de alagamento pontual nas chuvas mais fortes — um cenário típico de C alto e classificação crítica. Dado real do protótipo: bairro Tabajaras, no início do corredor."
       />
 
       <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -367,8 +399,8 @@ export function SlideCaseStudy() {
       </div>
 
       <p className="mt-6 text-sm text-emerald-700/40">
-        Valores ilustrativos para demonstrar a proposta — calibrados com dados reais
-        na fase piloto.
+        Dados extraídos do protótipo VERDE. O C ainda é uma estimativa por uso do
+        solo — a calibração com sensores e satélite reais é a próxima fase.
       </p>
     </Slide>
   )
