@@ -127,3 +127,16 @@
     @apply bg-background text-foreground;
     }
 }
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  .pitch-print-surface,
+  .pitch-print-surface * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
