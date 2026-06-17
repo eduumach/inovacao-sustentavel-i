@@ -108,7 +108,7 @@ export function SlideProblem() {
         title="Uberlândia cresce mais rápido do que sua capacidade de enxergar os riscos ambientais"
       />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 print:grid-cols-4">
         {items.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
@@ -140,7 +140,7 @@ export function SlideInsight() {
         description="O coeficiente de escoamento (C) mede quanto da água da chuva escorre pela superfície em vez de infiltrar no solo. O VERDE inverte sua lógica tradicional: em vez de calculá-lo só para projetar galerias pluviais, usa o C por bairro como indicador vivo de saúde ambiental urbana."
       />
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+      <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center print:grid-cols-[1fr_auto_1fr] print:items-center">
         <Card className="border-emerald-400/30 bg-emerald-400/5">
           <Sprout className="size-6 text-emerald-600" />
           <p className="mt-3 text-base font-semibold uppercase tracking-wide text-emerald-700">
@@ -207,10 +207,10 @@ export function SlideSolution() {
       <SlideHeading
         kicker="A solução"
         title="VERDE: o gêmeo digital ambiental de Uberlândia"
-        description="Uma plataforma que cruza imagens de satélite, sensores ambientais e dados públicos para gerar, em tempo quase real, o Índice de Saúde Ambiental de cada bairro — com o coeficiente de escoamento como eixo central."
+        description="Uma plataforma que cruza imagens de satélite, sensores ambientais e dados públicos para gerar, em tempo quase real, a classificação de risco ambiental de cada bairro — com o coeficiente de escoamento (C) como eixo central."
       />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 print:grid-cols-4">
         {features.map((feature) => (
           <Card key={feature.title}>
             <feature.icon className="size-6 text-emerald-600" />
@@ -254,8 +254,8 @@ export function SlideHowItWorks() {
     },
     {
       icon: Network,
-      title: "4. Índice & simulação",
-      text: "Índice de Saúde Ambiental e simulador de intervenções, disponíveis em um painel público.",
+      title: "4. Classificação & simulação",
+      text: "Classificação de risco por bairro e simulador de intervenções, disponíveis em um painel público.",
     },
   ]
 
@@ -268,7 +268,7 @@ export function SlideHowItWorks() {
         title="Da imagem de satélite ao indicador de bairro, em quatro camadas"
       />
 
-      <div className="mt-10 grid gap-4 lg:grid-cols-4">
+      <div className="mt-10 grid gap-4 lg:grid-cols-4 print:grid-cols-4">
         {steps.map((step, i) => (
           <div key={step.title} className="relative">
             <Card className="h-full">
@@ -324,8 +324,8 @@ export function SlideIndex() {
         description="O coeficiente de escoamento (C) de cada bairro é convertido em uma classificação de 4 níveis e em um volume estimado de água escoada — visível agora no mapa interativo. Cobertura vegetal e temperatura de superfície são a próxima camada do índice."
       />
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
-        <div className="grid gap-4 sm:grid-cols-2">
+      <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr] print:grid-cols-[1.2fr_1fr]">
+        <div className="grid gap-4 sm:grid-cols-2 print:grid-cols-2">
           {components.map((c) => (
             <Card key={c.label} className="flex flex-row items-start gap-3">
               <c.icon className="mt-1 size-5 shrink-0 text-emerald-600" />
@@ -387,7 +387,7 @@ export function SlideCaseStudy() {
         description="Grande volume de pavimento (via larga, estacionamentos comerciais), pouca arborização e relatos recorrentes de alagamento pontual nas chuvas mais fortes — um cenário típico de C alto e classificação crítica. Dado real do protótipo: bairro Tabajaras, no início do corredor."
       />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:grid-cols-3 print:grid-cols-3">
         {metrics.map((m) => (
           <Card key={m.label}>
             <p className="text-sm uppercase tracking-wide text-emerald-700/50">
@@ -431,7 +431,7 @@ export function SlideSimulations() {
     {
       icon: Bus,
       title: "Ônibus elétricos",
-      text: "Reduzem calor residual e poluentes, melhorando a dimensão de calor e qualidade do ar do ISA.",
+      text: "Reduzem calor residual e poluentes, melhorando o conforto térmico e a qualidade do ar dos bairros.",
     },
   ]
 
@@ -443,10 +443,10 @@ export function SlideSimulations() {
       <SlideHeading
         kicker="Simulação de cenários"
         title="Antes de qualquer obra, simule o impacto"
-        description="O simulador do VERDE projeta o efeito de cada intervenção sobre o coeficiente de escoamento e o ISA — para priorizar investimento onde o ganho ambiental é maior."
+        description="O simulador do VERDE projeta o efeito de cada intervenção sobre o coeficiente de escoamento e a classificação de risco — para priorizar investimento onde o ganho ambiental é maior."
       />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 print:grid-cols-5">
         {interventions.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
@@ -472,17 +472,17 @@ export function SlideResults() {
         description="Simulação combinando arborização, pavimento permeável e jardins de chuva ao longo do corredor."
       />
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 print:grid-cols-2">
         <Card className="border-rose-400/20 bg-rose-400/5">
-          <p className="text-sm uppercase tracking-wide text-rose-700">Antes</p>
+          <p className="text-sm uppercase tracking-wide text-rose-700">Antes (Tabajaras)</p>
           <div className="mt-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-base text-emerald-800/70">Coeficiente C</span>
-              <span className="font-mono text-xl font-semibold text-emerald-950">0,78</span>
+              <span className="font-mono text-xl font-semibold text-emerald-950">0,82</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-base text-emerald-800/70">ISA</span>
-              <span className="font-mono text-xl font-semibold text-emerald-950">38</span>
+              <span className="text-base text-emerald-800/70">Classificação</span>
+              <span className="text-base font-semibold text-rose-700">Crítica</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-base text-emerald-800/70">Risco de alagamento</span>
@@ -492,18 +492,18 @@ export function SlideResults() {
         </Card>
 
         <Card className="border-emerald-400/30 bg-emerald-400/5">
-          <p className="text-sm uppercase tracking-wide text-emerald-700">Depois</p>
+          <p className="text-sm uppercase tracking-wide text-emerald-700">Depois (projetado)</p>
           <div className="mt-4 space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-base text-emerald-800/70">Coeficiente C</span>
               <span className="flex items-center gap-1 font-mono text-xl font-semibold text-emerald-950">
-                0,51 <TrendingDown className="size-4 text-emerald-600" />
+                0,55 <TrendingDown className="size-4 text-emerald-600" />
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-base text-emerald-800/70">ISA</span>
-              <span className="flex items-center gap-1 font-mono text-xl font-semibold text-emerald-950">
-                67 <TrendingUp className="size-4 text-emerald-600" />
+              <span className="text-base text-emerald-800/70">Classificação</span>
+              <span className="flex items-center gap-1 text-base font-semibold text-emerald-700">
+                Atenção <TrendingUp className="size-4 text-emerald-600" />
               </span>
             </div>
             <div className="flex items-center justify-between">
@@ -552,7 +552,7 @@ export function SlideImpact() {
 
       <SlideHeading kicker="Impacto" title="Por que isso importa para Uberlândia" />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 print:grid-cols-4">
         {items.map((item) => (
           <Card key={item.title}>
             <item.icon className="size-6 text-emerald-600" />
@@ -594,7 +594,7 @@ export function SlideFuture() {
         title="De um índice por bairro ao gêmeo digital ambiental da cidade"
       />
 
-      <div className="mt-10 grid gap-4 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 lg:grid-cols-3 print:grid-cols-3">
         {phases.map((phase, i) => (
           <Card key={phase.title} className="relative">
             <span className="flex size-8 items-center justify-center rounded-full border border-emerald-400/30 text-base font-semibold text-emerald-700">
@@ -638,7 +638,7 @@ export function SlideTeam() {
 
       <SlideHeading kicker="Equipe" title="Quem está por trás do VERDE" />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3">
         {members.map((member) => (
           <Card key={member.name}>
             <GraduationCap className="size-6 text-emerald-600" />

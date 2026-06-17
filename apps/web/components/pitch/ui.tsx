@@ -19,7 +19,7 @@ export function Slide({
       data-slide-index={index}
       className={cn(
         "relative flex h-svh w-full snap-start flex-col justify-center overflow-hidden px-6 py-24 sm:px-12 lg:px-24",
-        "print:h-auto print:min-h-screen print:w-full print:overflow-visible print:break-after-page print:px-12 print:py-12",
+        "print:h-auto print:w-full print:flex-none print:overflow-visible print:break-after-page print:px-12 print:py-12",
         className
       )}
     >

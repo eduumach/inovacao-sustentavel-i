@@ -130,7 +130,7 @@
 
 @media print {
   @page {
-    size: landscape;
+    size: 1280px 720px;
     margin: 0;
   }
 
